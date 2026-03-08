@@ -21,30 +21,47 @@
             min-height: 100vh;
             font-family: 'Inter', 'Jameel Noori Nastaleeq', sans-serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            padding: 8px;
+            padding: 0;
         }
 
-        /* Main card – responsive with font scaling */
-        .islamic-card {
+        /* main container - full width with max-width */
+        .main-container {
             max-width: 1400px;
             width: 100%;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(4px);
-            border-radius: max(20px, min(4vw, 50px)) max(20px, min(4vw, 50px)) max(18px, min(3.5vw, 45px)) max(18px, min(3.5vw, 45px));
-            box-shadow: 0 20px 40px -15px #4f3c28, 0 0 0 1px #f5ddbb inset;
-            border: 1px solid #f0cfaa;
-            padding: clamp(12px, 2.5vw, 35px);
-            transition: all 0.2s;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
         }
 
-        /* ===== FESTIVE HEADER – scales beautifully ===== */
+        /* ===== STICKY HEADER CONTAINER (Islamic card + search together) ===== */
+        .sticky-header-container {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            background: transparent;
+            /* padding-top: 8px;  top margin */
+            margin-bottom: 20px; /* bottom margin after search */
+        }
+
+        /* inner content for sticky elements */
+        .sticky-content {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(8px);
+            border-radius: max(20px, min(4vw, 50px)) max(20px, min(4vw, 50px)) max(18px, min(3.5vw, 45px)) max(18px, min(3.5vw, 45px));
+            box-shadow: 0 20px 40px -12px #2d241a, 0 0 0 2px #f5ddbb inset;
+            border: 1px solid #f0cfaa;
+            padding: clamp(12px, 2.5vw, 30px);
+        }
+
+        /* ===== FESTIVE HEADER ===== */
         .festive-header {
             background: linear-gradient(135deg, #0b4f3a, #1b6d50 80%, #b58c4f);
             border-radius: max(18px, min(3vw, 40px)) max(18px, min(3vw, 40px)) max(15px, min(2.5vw, 35px)) max(15px, min(2.5vw, 35px));
             padding: clamp(10px, 2.2vw, 28px) clamp(10px, 2.2vw, 28px);
-            margin-bottom: clamp(12px, 2.2vh, 25px);
+            margin-bottom: clamp(12px, 2vh, 20px); /* margin between header and search */
             color: white;
             position: relative;
             overflow: hidden;
@@ -86,7 +103,6 @@
             line-height: 1.2;
         }
 
-        /* small ترتیب in header */
         .uba-header-small {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(5px);
@@ -106,7 +122,6 @@
             color: #ffe1a3;
         }
 
-        /* header main */
         .header-main {
             display: flex;
             flex-wrap: wrap;
@@ -185,7 +200,6 @@
             color: #1e5735;
         }
 
-        /* decoration line */
         .header-decor {
             display: flex;
             justify-content: center;
@@ -195,25 +209,26 @@
             font-size: clamp(0.8rem, 2.5vw, 1.4rem);
         }
 
-        /* search container */
-        .search-container {
+        /* ===== SEARCH SECTION (inside sticky container) ===== */
+        .search-section {
             background: #fffcf5;
             border-radius: 60px;
             padding: clamp(5px, 1.2vw, 16px) clamp(12px, 2.5vw, 28px);
-            margin-bottom: clamp(10px, 2vh, 22px);
-            box-shadow: 0 5px 12px -5px #9b7e5a, 0 1px 0 1px #eddbbb inset;
+            box-shadow: 0 5px 15px -5px #9b7e5a, 0 1px 0 1px #eddbbb inset;
             border: 1px solid #f5cf9f;
             display: flex;
             align-items: center;
             gap: clamp(4px, 1.2vw, 15px);
+            background: rgba(255, 252, 245, 0.98);
+            width: 100%;
         }
 
-        .search-container .material-icons {
+        .search-section .material-icons {
             color: #b27d49;
             font-size: clamp(1.2rem, 3.5vw, 2.4rem);
         }
 
-        .search-container input {
+        .search-section input {
             flex: 1;
             border: none;
             background: transparent;
@@ -225,7 +240,7 @@
             min-width: 120px;
         }
 
-        .search-container input::placeholder {
+        .search-section input::placeholder {
             color: #b5956b;
             font-size: clamp(0.7rem, 2.2vw, 1.4rem);
         }
@@ -234,40 +249,39 @@
             display: flex;
             justify-content: flex-end;
             gap: 4px;
-            margin-bottom: 12px;
+            margin: 8px 0 20px 0;
             color: #7d613e;
             font-size: clamp(0.6rem, 2vw, 1.2rem);
             flex-wrap: wrap;
+            padding-right: 5px;
         }
 
-        /* ===== TABLE – perfectly readable on all devices ===== */
+        /* ===== TABLE (scrolls normally) ===== */
         .table-container {
             width: 100%;
-            overflow-x: auto; /* only if absolutely needed, but we scale font so it rarely happens */
+            overflow-x: auto;
             border-radius: max(12px, min(2vw, 30px));
             background: #fefcf7;
             border: 1px solid #efd9bb;
             box-shadow: 0 10px 18px -10px #5e4530;
-            margin-bottom: clamp(12px, 2.5vh, 25px);
+            margin-bottom: 20px;
             -webkit-overflow-scrolling: touch;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: clamp(0.7rem, 2.2vw, 1.5rem); /* scales from mobile to large desktop */
-            min-width: 300px; /* never too small */
+            font-size: clamp(0.7rem, 2.2vw, 1.5rem);
+            min-width: 300px;
         }
 
-        /* make columns readable */
         th, td {
             padding: clamp(5px, 1.2vw, 18px) clamp(3px, 0.8vw, 12px);
             text-align: center;
             word-break: normal;
-            white-space: nowrap; /* keep data in one line on large, but can wrap if needed */
+            white-space: nowrap;
         }
 
-        /* allow wrapping on very small devices if needed */
         @media (max-width: 450px) {
             th, td {
                 white-space: normal;
@@ -299,7 +313,6 @@
             color: #1f352c;
         }
 
-        /* Numeric columns */
         td:nth-child(1), td:nth-child(2) {
             font-family: 'Inter', 'Tahoma', monospace;
             font-weight: 500;
@@ -309,18 +322,26 @@
         td:nth-child(3) { color: #166b4a; }
         td:nth-child(4) { color: #ac4f1e; }
 
-        /* ===== SMALL FOOTER – scales ===== */
-        .small-footer {
+        /* ===== FULL WIDTH FOOTER ===== */
+        .full-width-footer {
+            width: 100%;
+            background: #efe0cd;
+            border-top: 5px solid #cb9e6b;
+            box-shadow: 0 -5px 10px -5px #745f43;
+            padding: clamp(12px, 2.5vw, 24px) 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 clamp(12px, 4vw, 40px);
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 8px 12px;
-            background: #efe0cd;
-            border-radius: max(20px, min(3vw, 50px));
-            padding: clamp(8px, 1.8vw, 20px) clamp(12px, 2.5vw, 30px);
-            border: 1px solid #e3bc8b;
-            box-shadow: 0 5px 10px -5px #745f43;
         }
 
         .uba-footer-small {
@@ -366,104 +387,121 @@
             white-space: nowrap;
         }
 
-        /* on large screens, everything becomes comfortably big */
-        @media (min-width: 1200px) {
-            .islamic-card {
-                padding: 40px;
-            }
-            th, td {
-                padding: 18px 12px;
-            }
-            .uba-header-small {
-                font-size: 1.4rem;
-            }
+        /* adjust body to allow footer at bottom */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
+
+        .main-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* table area takes remaining space */
+        .table-container {
+            flex-shrink: 0;
         }
     </style>
 </head>
 <body>
-<div class="islamic-card">
+<div class="main-container">
 
-    <!-- HEADER with small ترتیب -->
-    <div class="festive-header">
-        <div class="bismillah-row">
-            <div class="bismillah-text">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
-            <div class="uba-header-small">
-                <span class="material-icons">edit_note</span>
-                <span>ترتیب: عبید نواب</span>
-            </div>
-        </div>
+    <!-- STICKY HEADER CONTAINER (Islamic card + search together) -->
+    <div class="sticky-header-container">
+        <div class="sticky-content">
+            <!-- FESTIVE HEADER -->
+            <div class="festive-header">
+                <div class="bismillah-row">
+                    <div class="bismillah-text">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+                    <div class="uba-header-small">
+                        <span class="material-icons">edit_note</span>
+                        <span>ترتیب: عبید نواب</span>
+                    </div>
+                </div>
 
-        <div class="header-main">
-            <div class="eid-message">
-                <div class="icon-moon">
-                    <span class="material-icons">nights_stay</span>
+                <div class="header-main">
+                    <div class="eid-message">
+                        <div class="icon-moon">
+                            <span class="material-icons">nights_stay</span>
+                        </div>
+                        <div class="eid-text">
+                            <h1>عید الفطر</h1>
+                            <h2>
+                                <span class="material-icons">location_on</span>
+                                پاک و ہند 1401-1500ھ
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="chip-pak">
+                        <span class="material-icons">flag</span>
+                        <span>1401–1500</span>
+                        <span class="material-icons">celebration</span>
+                    </div>
                 </div>
-                <div class="eid-text">
-                    <h1>عید الفطر</h1>
-                    <h2>
-                        <span class="material-icons">location_on</span>
-                        پاک و ہند 1401-1500ھ
-                    </h2>
+                <div class="header-decor">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">brightness_3</span>
+                    <span class="material-icons">mosque</span>
+                    <span class="material-icons">flare</span>
                 </div>
             </div>
-            <div class="chip-pak">
-                <span class="material-icons">flag</span>
-                <span>1401–1500</span>
-                <span class="material-icons">celebration</span>
+
+            <!-- SEARCH (inside same sticky container) -->
+            <div class="search-section">
+                <span class="material-icons">search</span>
+                <input type="text" id="yearSearch" placeholder="ہجری یا عیسوی سال" autocomplete="off">
+                <span class="material-icons">tune</span>
             </div>
-        </div>
-        <!-- subtle decoration -->
-        <div class="header-decor">
-            <span class="material-icons">star</span>
-            <span class="material-icons">brightness_3</span>
-            <span class="material-icons">mosque</span>
-            <span class="material-icons">flare</span>
         </div>
     </div>
 
-    <!-- SEARCH -->
-    <div class="search-container">
-        <span class="material-icons">search</span>
-        <input type="text" id="yearSearch" placeholder="ہجری یا عیسوی سال" autocomplete="off">
-        <span class="material-icons">tune</span>
-    </div>
-    <div class="search-hint">
+    <!-- search hint (outside sticky but follows) -->
+    <div class="search-hint" style="padding: 0 clamp(12px, 4vw, 40px);">
         <span class="material-icons">info</span>
         <span>ہجری / عیسوی فلٹر</span>
     </div>
 
-    <!-- TABLE – scales with viewport -->
-    <div class="table-container">
-        <table id="hijriTable">
-            <thead>
-                <tr>
-                    <th><span class="material-icons">filter_1</span> ہجری</th>
-                    <th><span class="material-icons">public</span> عیسوی</th>
-                    <th><span class="material-icons">calendar_month</span> تاریخ</th>
-                    <th><span class="material-icons">weekend</span> دن</th>
-                </tr>
-            </thead>
-            <tbody id="tableBody">
-                <!-- injected -->
-            </tbody>
-        </table>
+    <!-- TABLE (scrolls normally) -->
+    <div style="padding: 0 clamp(12px, 4vw, 40px);">
+        <div class="table-container">
+            <table id="hijriTable">
+                <thead>
+                    <tr>
+                        <th><span class="material-icons">filter_1</span> ہجری</th>
+                        <th><span class="material-icons">public</span> عیسوی</th>
+                        <th><span class="material-icons">calendar_month</span> تاریخ</th>
+                        <th><span class="material-icons">weekend</span> دن</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- injected -->
+                </tbody>
+            </table>
+        </div>
     </div>
 
-    <!-- SMALL FOOTER -->
-    <div class="small-footer">
-        <div class="uba-footer-small">
-            <span class="material-icons">edit_note</span>
-            <span><strong>ترتیب:</strong> عبید نواب</span>
-            <span class="material-icons">check_circle</span>
-        </div>
-        <div class="dua-small">
-            <span class="material-icons">volunteer_activism</span>
-            <span>عیدکم مبارک</span>
-            <span class="material-icons">mosque</span>
-        </div>
-        <div class="year-note">
-            <span class="material-icons">celebration</span>
-            <span>1401–1500ھ</span>
+    <!-- FULL WIDTH FOOTER -->
+    <div class="full-width-footer">
+        <div class="footer-content">
+            <div class="uba-footer-small">
+                <span class="material-icons">edit_note</span>
+                <span><strong>ترتیب:</strong> عبید نواب</span>
+                <span class="material-icons">check_circle</span>
+            </div>
+            <div class="dua-small">
+                <span class="material-icons">volunteer_activism</span>
+                <span>عیدکم مبارک</span>
+                <span class="material-icons">mosque</span>
+            </div>
+            <div class="year-note">
+                <span class="material-icons">celebration</span>
+                <span>1401–1500ھ</span>
+            </div>
         </div>
     </div>
 </div>
