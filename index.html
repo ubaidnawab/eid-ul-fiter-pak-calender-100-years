@@ -35,37 +35,37 @@
             flex-direction: column;
         }
 
-        /* ===== STICKY HEADER CONTAINER (Islamic card + search together) ===== */
+        /* ===== STICKY HEADER CONTAINER (smaller islamic card) ===== */
         .sticky-header-container {
             position: sticky;
             top: 0;
             z-index: 1000;
             width: 100%;
             background: transparent;
-            /* padding-top: 8px;  top margin */
-            margin-bottom: 20px; /* bottom margin after search */
+            //padding-top: 5px;
+            margin-bottom: 15px;
         }
 
-        /* inner content for sticky elements */
+        /* inner content for sticky elements - smaller card */
         .sticky-content {
             background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(8px);
-            border-radius: max(20px, min(4vw, 50px)) max(20px, min(4vw, 50px)) max(18px, min(3.5vw, 45px)) max(18px, min(3.5vw, 45px));
-            box-shadow: 0 20px 40px -12px #2d241a, 0 0 0 2px #f5ddbb inset;
+            border-radius: 0 0 max(14px, min(2.5vw, 35px)) max(14px, min(2.5vw, 35px));
+            box-shadow: 0 15px 30px -10px #2d241a, 0 0 0 2px #f5ddbb inset;
             border: 1px solid #f0cfaa;
-            padding: clamp(12px, 2.5vw, 30px);
+            padding: clamp(8px, 2vw, 20px);
         }
 
-        /* ===== FESTIVE HEADER ===== */
+        /* ===== FESTIVE HEADER - smaller ===== */
         .festive-header {
             background: linear-gradient(135deg, #0b4f3a, #1b6d50 80%, #b58c4f);
-            border-radius: max(18px, min(3vw, 40px)) max(18px, min(3vw, 40px)) max(15px, min(2.5vw, 35px)) max(15px, min(2.5vw, 35px));
-            padding: clamp(10px, 2.2vw, 28px) clamp(10px, 2.2vw, 28px);
-            margin-bottom: clamp(12px, 2vh, 20px); /* margin between header and search */
+            border-radius: max(14px, min(2.5vw, 30px)) max(14px, min(2.5vw, 30px)) max(12px, min(2vw, 25px)) max(12px, min(2vw, 25px));
+            padding: clamp(6px, 1.5vw, 16px) clamp(8px, 1.8vw, 20px);
+            margin-bottom: clamp(8px, 1.5vh, 12px);
             color: white;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 18px -8px #543e25;
+            box-shadow: 0 8px 14px -6px #543e25;
         }
 
         .festive-header::before {
@@ -75,8 +75,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M20 20 L30 20 L25 30 Z" fill="white"/><path d="M70 70 L80 70 L75 80 Z" fill="white"/><circle cx="50" cy="30" r="8" fill="white"/><circle cx="80" cy="20" r="5" fill="white"/><circle cx="15" cy="75" r="6" fill="white"/></svg>');
-            background-size: clamp(60px, 8vw, 120px);
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M20 20 L30 20 L25 30 Z" fill="white"/><path d="M70 70 L80 70 L75 80 Z" fill="white"/><circle cx="50" cy="30" r="6" fill="white"/><circle cx="80" cy="20" r="4" fill="white"/><circle cx="15" cy="75" r="5" fill="white"/></svg>');
+            background-size: clamp(50px, 6vw, 90px);
             pointer-events: none;
         }
 
@@ -85,20 +85,20 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 5px 8px;
-            margin-bottom: clamp(5px, 1.2vh, 12px);
+            gap: 4px 6px;
+            margin-bottom: clamp(3px, 0.8vh, 8px);
             position: relative;
             z-index: 2;
         }
 
         .bismillah-text {
-            font-size: clamp(1.2rem, 4vw, 2.4rem);
+            font-size: clamp(1rem, 3vw, 1.8rem);
             font-family: 'Jameel Noori Nastaleeq', 'Traditional Arabic', serif;
             color: #ffdead;
-            text-shadow: 0 2px 4px #0f341f;
+            text-shadow: 0 2px 3px #0f341f;
             background: rgba(0,40,20,0.25);
-            padding: 3px clamp(8px, 2vw, 20px);
-            border-radius: 40px;
+            padding: 2px clamp(6px, 1.5vw, 14px);
+            border-radius: 30px;
             backdrop-filter: blur(2px);
             line-height: 1.2;
         }
@@ -106,19 +106,19 @@
         .uba-header-small {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(5px);
-            padding: 3px clamp(8px, 1.5vw, 18px) 3px clamp(6px, 1.2vw, 14px);
-            border-radius: 40px;
-            font-size: clamp(0.8rem, 2.5vw, 1.4rem);
+            padding: 2px clamp(6px, 1.2vw, 14px) 2px clamp(5px, 1vw, 12px);
+            border-radius: 30px;
+            font-size: clamp(0.7rem, 2vw, 1.2rem);
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 3px;
             border: 1px solid #f0cb94;
             color: #ffeec9;
             white-space: nowrap;
         }
 
         .uba-header-small .material-icons {
-            font-size: clamp(1rem, 3vw, 1.8rem);
+            font-size: clamp(0.9rem, 2.5vw, 1.4rem);
             color: #ffe1a3;
         }
 
@@ -127,7 +127,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            gap: 8px 10px;
+            gap: 6px 8px;
             position: relative;
             z-index: 2;
         }
@@ -135,30 +135,30 @@
         .eid-message {
             display: flex;
             align-items: center;
-            gap: clamp(6px, 2vw, 18px);
+            gap: clamp(4px, 1.5vw, 12px);
             flex-wrap: wrap;
         }
 
         .icon-moon {
             background: #fdd48d;
-            width: clamp(40px, 8vw, 90px);
-            height: clamp(40px, 8vw, 90px);
+            width: clamp(30px, 6vw, 60px);
+            height: clamp(30px, 6vw, 60px);
             border-radius: 50% 30% 50% 30%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: clamp(2px, 0.4vw, 4px) solid #ffe6af;
-            box-shadow: 0 4px 8px #1e3623;
+            border: clamp(2px, 0.3vw, 3px) solid #ffe6af;
+            box-shadow: 0 3px 6px #1e3623;
             flex-shrink: 0;
         }
 
         .icon-moon .material-icons {
-            font-size: clamp(2rem, 5vw, 5rem);
+            font-size: clamp(1.5rem, 4vw, 3rem);
             color: #124d31;
         }
 
         .eid-text h1 {
-            font-size: clamp(1.4rem, 5vw, 3.2rem);
+            font-size: clamp(1.2rem, 4vw, 2.4rem);
             font-weight: 700;
             color: #fcf0d5;
             text-shadow: 0 2px 3px #1b4025;
@@ -166,7 +166,7 @@
         }
 
         .eid-text h2 {
-            font-size: clamp(0.8rem, 2.5vw, 1.6rem);
+            font-size: clamp(0.7rem, 2vw, 1.2rem);
             display: flex;
             align-items: center;
             gap: 3px;
@@ -176,56 +176,56 @@
         }
 
         .eid-text h2 .material-icons {
-            font-size: clamp(0.9rem, 2.8vw, 1.8rem);
+            font-size: clamp(0.8rem, 2.2vw, 1.3rem);
             color: #ffcd7e;
         }
 
         .chip-pak {
             background: #e6c588;
             color: #1a402e;
-            padding: clamp(4px, 1vw, 14px) clamp(8px, 2vw, 24px);
-            border-radius: 60px;
-            font-size: clamp(0.8rem, 2.5vw, 1.7rem);
+            padding: clamp(3px, 0.8vw, 10px) clamp(6px, 1.5vw, 18px);
+            border-radius: 40px;
+            font-size: clamp(0.7rem, 2vw, 1.3rem);
             font-weight: 600;
             display: flex;
             align-items: center;
-            gap: clamp(4px, 1vw, 12px);
+            gap: clamp(3px, 0.8vw, 8px);
             border: 1px solid #ffdcaa;
-            box-shadow: 0 3px 0 #7a572f;
+            box-shadow: 0 2px 0 #7a572f;
             white-space: nowrap;
         }
 
         .chip-pak .material-icons {
-            font-size: clamp(1rem, 3vw, 2.2rem);
+            font-size: clamp(0.9rem, 2.5vw, 1.6rem);
             color: #1e5735;
         }
 
         .header-decor {
             display: flex;
             justify-content: center;
-            gap: clamp(8px, 2vw, 30px);
-            margin-top: clamp(4px, 1vh, 12px);
+            gap: clamp(6px, 1.5vw, 20px);
+            margin-top: clamp(3px, 0.8vh, 8px);
             color: #f9e2b3;
-            font-size: clamp(0.8rem, 2.5vw, 1.4rem);
+            font-size: clamp(0.7rem, 2vw, 1.1rem);
         }
 
-        /* ===== SEARCH SECTION (inside sticky container) ===== */
+        /* ===== SEARCH SECTION ===== */
         .search-section {
             background: #fffcf5;
-            border-radius: 60px;
-            padding: clamp(5px, 1.2vw, 16px) clamp(12px, 2.5vw, 28px);
-            box-shadow: 0 5px 15px -5px #9b7e5a, 0 1px 0 1px #eddbbb inset;
+            border-radius: 50px;
+            padding: clamp(4px, 1vw, 12px) clamp(10px, 2vw, 22px);
+            box-shadow: 0 4px 12px -4px #9b7e5a, 0 1px 0 1px #eddbbb inset;
             border: 1px solid #f5cf9f;
             display: flex;
             align-items: center;
-            gap: clamp(4px, 1.2vw, 15px);
+            gap: clamp(4px, 1vw, 12px);
             background: rgba(255, 252, 245, 0.98);
             width: 100%;
         }
 
         .search-section .material-icons {
             color: #b27d49;
-            font-size: clamp(1.2rem, 3.5vw, 2.4rem);
+            font-size: clamp(1rem, 3vw, 1.8rem);
         }
 
         .search-section input {
@@ -233,50 +233,50 @@
             border: none;
             background: transparent;
             font-family: 'Inter', 'Jameel Noori Nastaleeq', sans-serif;
-            font-size: clamp(0.8rem, 2.5vw, 1.6rem);
-            padding: 6px 0;
+            font-size: clamp(0.7rem, 2.2vw, 1.2rem);
+            padding: 4px 0;
             outline: none;
             color: #2b3d31;
-            min-width: 120px;
+            min-width: 100px;
         }
 
         .search-section input::placeholder {
             color: #b5956b;
-            font-size: clamp(0.7rem, 2.2vw, 1.4rem);
+            font-size: clamp(0.65rem, 2vw, 1.1rem);
         }
 
         .search-hint {
             display: flex;
             justify-content: flex-end;
             gap: 4px;
-            margin: 8px 0 20px 0;
+            margin: 5px 0 15px 0;
             color: #7d613e;
-            font-size: clamp(0.6rem, 2vw, 1.2rem);
+            font-size: clamp(0.6rem, 1.8vw, 1rem);
             flex-wrap: wrap;
             padding-right: 5px;
         }
 
-        /* ===== TABLE (scrolls normally) ===== */
+        /* ===== TABLE ===== */
         .table-container {
             width: 100%;
             overflow-x: auto;
-            border-radius: max(12px, min(2vw, 30px));
+            border-radius: max(12px, min(2vw, 25px));
             background: #fefcf7;
             border: 1px solid #efd9bb;
-            box-shadow: 0 10px 18px -10px #5e4530;
-            margin-bottom: 20px;
+            box-shadow: 0 8px 15px -8px #5e4530;
+            margin-bottom: 15px;
             -webkit-overflow-scrolling: touch;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: clamp(0.7rem, 2.2vw, 1.5rem);
+            font-size: clamp(0.65rem, 2vw, 1.3rem);
             min-width: 300px;
         }
 
         th, td {
-            padding: clamp(5px, 1.2vw, 18px) clamp(3px, 0.8vw, 12px);
+            padding: clamp(4px, 1vw, 14px) clamp(2px, 0.7vw, 10px);
             text-align: center;
             word-break: normal;
             white-space: nowrap;
@@ -288,7 +288,7 @@
                 word-break: break-word;
             }
             table {
-                font-size: 0.65rem;
+                font-size: 0.6rem;
             }
         }
 
@@ -296,12 +296,12 @@
             background: #1a5e45;
             color: #fbeed5;
             font-weight: 600;
-            font-size: clamp(0.7rem, 2.2vw, 1.5rem);
+            font-size: clamp(0.65rem, 2vw, 1.3rem);
             border-bottom: 2px solid #e5b46b;
         }
 
         th .material-icons {
-            font-size: clamp(0.8rem, 2.5vw, 1.8rem);
+            font-size: clamp(0.7rem, 2.2vw, 1.4rem);
             vertical-align: middle;
             margin-left: 2px;
             color: #fdd894;
@@ -313,6 +313,19 @@
             color: #1f352c;
         }
 
+        /* current year highlight */
+        .current-year-row {
+            background-color: #fef9e7 !important;
+            border-left: 4px solid #d4a017;
+            border-right: 4px solid #d4a017;
+            font-weight: 600;
+        }
+
+        .current-year-row td {
+            background-color: #fef9e7;
+            color: #a86f1f;
+        }
+
         td:nth-child(1), td:nth-child(2) {
             font-family: 'Inter', 'Tahoma', monospace;
             font-weight: 500;
@@ -322,13 +335,16 @@
         td:nth-child(3) { color: #166b4a; }
         td:nth-child(4) { color: #ac4f1e; }
 
+        .current-year-row td:nth-child(3) { color: #b76819; }
+        .current-year-row td:nth-child(4) { color: #b83d0e; }
+
         /* ===== FULL WIDTH FOOTER ===== */
         .full-width-footer {
             width: 100%;
             background: #efe0cd;
             border-top: 5px solid #cb9e6b;
             box-shadow: 0 -5px 10px -5px #745f43;
-            padding: clamp(12px, 2.5vw, 24px) 0;
+            padding: clamp(8px, 2vw, 18px) 0;
             margin-top: auto;
         }
 
@@ -341,53 +357,52 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 8px 12px;
+            gap: 6px 10px;
         }
 
         .uba-footer-small {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
             background: #fbead7;
-            padding: 4px clamp(10px, 2vw, 24px);
-            border-radius: 40px;
-            font-size: clamp(0.7rem, 2.2vw, 1.5rem);
+            padding: 3px clamp(8px, 1.8vw, 20px);
+            border-radius: 30px;
+            font-size: clamp(0.65rem, 2vw, 1.2rem);
             border: 1px solid #d6a469;
             white-space: nowrap;
         }
 
         .uba-footer-small .material-icons {
-            font-size: clamp(0.9rem, 2.8vw, 2rem);
+            font-size: clamp(0.8rem, 2.5vw, 1.6rem);
             color: #206b49;
         }
 
         .dua-small {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             color: #4d3a25;
-            font-size: clamp(0.7rem, 2.2vw, 1.5rem);
+            font-size: clamp(0.65rem, 2vw, 1.2rem);
             flex-wrap: wrap;
         }
 
         .dua-small .material-icons {
-            font-size: clamp(0.9rem, 2.8vw, 2.2rem);
+            font-size: clamp(0.8rem, 2.5vw, 1.7rem);
             color: #b06428;
         }
 
         .year-note {
             background: #fde7c0;
-            border-radius: 40px;
-            padding: 3px clamp(8px, 1.8vw, 20px);
+            border-radius: 30px;
+            padding: 2px clamp(6px, 1.5vw, 16px);
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 3px;
             color: #2a4d2a;
-            font-size: clamp(0.65rem, 2vw, 1.3rem);
+            font-size: clamp(0.6rem, 1.8vw, 1.1rem);
             white-space: nowrap;
         }
 
-        /* adjust body to allow footer at bottom */
         body {
             min-height: 100vh;
             display: flex;
@@ -402,19 +417,28 @@
             flex-direction: column;
         }
 
-        /* table area takes remaining space */
         .table-container {
             flex-shrink: 0;
+        }
+
+        /* current year badge */
+        .current-badge {
+            background: #d4a017;
+            color: #1a402e;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
 <div class="main-container">
 
-    <!-- STICKY HEADER CONTAINER (Islamic card + search together) -->
+    <!-- STICKY HEADER CONTAINER (smaller islamic card) -->
     <div class="sticky-header-container">
         <div class="sticky-content">
-            <!-- FESTIVE HEADER -->
+            <!-- FESTIVE HEADER - smaller now -->
             <div class="festive-header">
                 <div class="bismillah-row">
                     <div class="bismillah-text">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
@@ -434,6 +458,7 @@
                             <h2>
                                 <span class="material-icons">location_on</span>
                                 پاک و ہند 1401-1500ھ
+                                <span class="current-badge" id="currentYearBadge">موجودہ</span>
                             </h2>
                         </div>
                     </div>
@@ -451,7 +476,7 @@
                 </div>
             </div>
 
-            <!-- SEARCH (inside same sticky container) -->
+            <!-- SEARCH -->
             <div class="search-section">
                 <span class="material-icons">search</span>
                 <input type="text" id="yearSearch" placeholder="ہجری یا عیسوی سال" autocomplete="off">
@@ -460,13 +485,13 @@
         </div>
     </div>
 
-    <!-- search hint (outside sticky but follows) -->
+    <!-- search hint (will be updated by JS) -->
     <div class="search-hint" style="padding: 0 clamp(12px, 4vw, 40px);">
         <span class="material-icons">info</span>
-        <span>ہجری / عیسوی فلٹر</span>
+        <span id="searchHintText">ہجری / عیسوی فلٹر</span>
     </div>
 
-    <!-- TABLE (scrolls normally) -->
+    <!-- TABLE -->
     <div style="padding: 0 clamp(12px, 4vw, 40px);">
         <div class="table-container">
             <table id="hijriTable">
@@ -508,7 +533,8 @@
 
 <script>
 (function() {
-    const rowsData = [
+    // Complete dataset
+    const originalData = [
         ["1401","1981","2 اگست","اتوار"],
         ["1402","1982","23 جولائی","جمعہ"],
         ["1403","1983","12 جولائی","منگل"],
@@ -555,7 +581,7 @@
         ["1444","2023","22 اپریل","ہفتہ"],
         ["1445","2024","10 اپریل","بدھ"],
         ["1446","2025","31 مارچ","پیر"],
-        ["1447","2026","20 مارچ","جمعہ"],
+        ["1447","2026","20 مارچ","جمعہ"], // Current year (2026)
         ["1448","2027","10 مارچ","بدھ"],
         ["1449","2028","27 فروری","اتوار"],
         ["1450","2029","15 فروری","جمعرات"],
@@ -611,24 +637,64 @@
         ["1500","2077","21 اگست","ہفتہ"]
     ];
 
+    // Get current Gregorian year from system
+    const currentGregorianYear = new Date().getFullYear(); // 2026
+    console.log("Current Gregorian Year:", currentGregorianYear);
+
+    // Find the row with matching Gregorian year
+    const currentYearIndex = originalData.findIndex(row => parseInt(row[1]) === currentGregorianYear);
+    
+    let currentHijriYear = "";
+    if (currentYearIndex !== -1) {
+        currentHijriYear = originalData[currentYearIndex][0];
+    } else {
+        // Fallback if not found (should not happen with our data)
+        currentHijriYear = "1447"; // Default to 1447 for 2026
+    }
+
+    // Update badges with current year info
+    document.getElementById('currentYearBadge').textContent = `موجودہ ${currentHijriYear}ھ`;
+    document.getElementById('searchHintText').innerHTML = `ہجری / عیسوی فلٹر • موجودہ سال ${currentHijriYear}ھ (${currentGregorianYear}) نمایاں`;
+
+    // Sort data: current year first, then rest in original order
+    let sortedData = [];
+    if (currentYearIndex !== -1) {
+        // Add current year first
+        sortedData.push(originalData[currentYearIndex]);
+        // Add all other years in original order (except current)
+        originalData.forEach((row, index) => {
+            if (index !== currentYearIndex) {
+                sortedData.push(row);
+            }
+        });
+    } else {
+        sortedData = [...originalData];
+    }
+
     const tbody = document.getElementById('tableBody');
     const searchInput = document.getElementById('yearSearch');
 
     function renderRows(filter) {
         tbody.innerHTML = '';
         const f = filter.trim().toLowerCase();
-        rowsData.forEach(r => {
-            if (f === '' || r[0].toLowerCase().includes(f) || r[1].toLowerCase().includes(f)) {
+        
+        sortedData.forEach((row) => {
+            if (f === '' || row[0].toLowerCase().includes(f) || row[1].toLowerCase().includes(f)) {
                 const tr = document.createElement('tr');
-                r.forEach(c => {
+                // Add highlight class for current year
+                if (row[0] === currentHijriYear) {
+                    tr.classList.add('current-year-row');
+                }
+                row.forEach(cell => {
                     const td = document.createElement('td');
-                    td.textContent = c;
+                    td.textContent = cell;
                     tr.appendChild(td);
                 });
                 tbody.appendChild(tr);
             }
         });
     }
+
     renderRows('');
     searchInput.addEventListener('input', e => renderRows(e.target.value));
 })();
