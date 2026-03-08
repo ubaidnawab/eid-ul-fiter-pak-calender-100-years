@@ -2,7 +2,7 @@
 <html lang="ur">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
     <title>عید الفطر • پاک و ہند 1401-1500 ھ</title>
     <!-- Material Icons + Google Fonts + Classic Urdu Font -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -26,25 +26,25 @@
             padding: 8px;
         }
 
-        /* Main card – fully responsive */
+        /* Main card – responsive with font scaling */
         .islamic-card {
-            max-width: 1300px;
+            max-width: 1400px;
             width: 100%;
             background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(4px);
-            border-radius: 30px 30px 25px 25px;
+            border-radius: max(20px, min(4vw, 50px)) max(20px, min(4vw, 50px)) max(18px, min(3.5vw, 45px)) max(18px, min(3.5vw, 45px));
             box-shadow: 0 20px 40px -15px #4f3c28, 0 0 0 1px #f5ddbb inset;
             border: 1px solid #f0cfaa;
-            padding: 12px;
+            padding: clamp(12px, 2.5vw, 35px);
             transition: all 0.2s;
         }
 
-        /* ===== FESTIVE HEADER – extra compact ===== */
+        /* ===== FESTIVE HEADER – scales beautifully ===== */
         .festive-header {
             background: linear-gradient(135deg, #0b4f3a, #1b6d50 80%, #b58c4f);
-            border-radius: 25px 25px 20px 20px;
-            padding: 12px 10px;
-            margin-bottom: 12px;
+            border-radius: max(18px, min(3vw, 40px)) max(18px, min(3vw, 40px)) max(15px, min(2.5vw, 35px)) max(15px, min(2.5vw, 35px));
+            padding: clamp(10px, 2.2vw, 28px) clamp(10px, 2.2vw, 28px);
+            margin-bottom: clamp(12px, 2.2vh, 25px);
             color: white;
             position: relative;
             overflow: hidden;
@@ -59,7 +59,7 @@
             width: 100%;
             height: 100%;
             background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M20 20 L30 20 L25 30 Z" fill="white"/><path d="M70 70 L80 70 L75 80 Z" fill="white"/><circle cx="50" cy="30" r="8" fill="white"/><circle cx="80" cy="20" r="5" fill="white"/><circle cx="15" cy="75" r="6" fill="white"/></svg>');
-            background-size: 80px;
+            background-size: clamp(60px, 8vw, 120px);
             pointer-events: none;
         }
 
@@ -68,20 +68,20 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 5px;
-            margin-bottom: 8px;
+            gap: 5px 8px;
+            margin-bottom: clamp(5px, 1.2vh, 12px);
             position: relative;
             z-index: 2;
         }
 
         .bismillah-text {
-            font-size: 1.2rem;
+            font-size: clamp(1.2rem, 4vw, 2.4rem);
             font-family: 'Jameel Noori Nastaleeq', 'Traditional Arabic', serif;
             color: #ffdead;
             text-shadow: 0 2px 4px #0f341f;
             background: rgba(0,40,20,0.25);
-            padding: 3px 12px;
-            border-radius: 30px;
+            padding: 3px clamp(8px, 2vw, 20px);
+            border-radius: 40px;
             backdrop-filter: blur(2px);
             line-height: 1.2;
         }
@@ -90,9 +90,9 @@
         .uba-header-small {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(5px);
-            padding: 3px 10px 3px 8px;
-            border-radius: 30px;
-            font-size: 0.9rem;
+            padding: 3px clamp(8px, 1.5vw, 18px) 3px clamp(6px, 1.2vw, 14px);
+            border-radius: 40px;
+            font-size: clamp(0.8rem, 2.5vw, 1.4rem);
             display: flex;
             align-items: center;
             gap: 4px;
@@ -102,7 +102,7 @@
         }
 
         .uba-header-small .material-icons {
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 3vw, 1.8rem);
             color: #ffe1a3;
         }
 
@@ -112,7 +112,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            gap: 8px 5px;
+            gap: 8px 10px;
             position: relative;
             z-index: 2;
         }
@@ -120,30 +120,30 @@
         .eid-message {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: clamp(6px, 2vw, 18px);
             flex-wrap: wrap;
         }
 
         .icon-moon {
             background: #fdd48d;
-            width: 40px;
-            height: 40px;
+            width: clamp(40px, 8vw, 90px);
+            height: clamp(40px, 8vw, 90px);
             border-radius: 50% 30% 50% 30%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid #ffe6af;
+            border: clamp(2px, 0.4vw, 4px) solid #ffe6af;
             box-shadow: 0 4px 8px #1e3623;
             flex-shrink: 0;
         }
 
         .icon-moon .material-icons {
-            font-size: 2rem;
+            font-size: clamp(2rem, 5vw, 5rem);
             color: #124d31;
         }
 
         .eid-text h1 {
-            font-size: 1.4rem;
+            font-size: clamp(1.4rem, 5vw, 3.2rem);
             font-weight: 700;
             color: #fcf0d5;
             text-shadow: 0 2px 3px #1b4025;
@@ -151,7 +151,7 @@
         }
 
         .eid-text h2 {
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2.5vw, 1.6rem);
             display: flex;
             align-items: center;
             gap: 3px;
@@ -161,27 +161,27 @@
         }
 
         .eid-text h2 .material-icons {
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 2.8vw, 1.8rem);
             color: #ffcd7e;
         }
 
         .chip-pak {
             background: #e6c588;
             color: #1a402e;
-            padding: 4px 12px;
-            border-radius: 40px;
-            font-size: 0.9rem;
+            padding: clamp(4px, 1vw, 14px) clamp(8px, 2vw, 24px);
+            border-radius: 60px;
+            font-size: clamp(0.8rem, 2.5vw, 1.7rem);
             font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: clamp(4px, 1vw, 12px);
             border: 1px solid #ffdcaa;
             box-shadow: 0 3px 0 #7a572f;
             white-space: nowrap;
         }
 
         .chip-pak .material-icons {
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 3vw, 2.2rem);
             color: #1e5735;
         }
 
@@ -189,28 +189,28 @@
         .header-decor {
             display: flex;
             justify-content: center;
-            gap: 12px;
-            margin-top: 5px;
+            gap: clamp(8px, 2vw, 30px);
+            margin-top: clamp(4px, 1vh, 12px);
             color: #f9e2b3;
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2.5vw, 1.4rem);
         }
 
         /* search container */
         .search-container {
             background: #fffcf5;
-            border-radius: 50px;
-            padding: 6px 15px;
-            margin-bottom: 12px;
+            border-radius: 60px;
+            padding: clamp(5px, 1.2vw, 16px) clamp(12px, 2.5vw, 28px);
+            margin-bottom: clamp(10px, 2vh, 22px);
             box-shadow: 0 5px 12px -5px #9b7e5a, 0 1px 0 1px #eddbbb inset;
             border: 1px solid #f5cf9f;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: clamp(4px, 1.2vw, 15px);
         }
 
         .search-container .material-icons {
             color: #b27d49;
-            font-size: 1.3rem;
+            font-size: clamp(1.2rem, 3.5vw, 2.4rem);
         }
 
         .search-container input {
@@ -218,7 +218,7 @@
             border: none;
             background: transparent;
             font-family: 'Inter', 'Jameel Noori Nastaleeq', sans-serif;
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2.5vw, 1.6rem);
             padding: 6px 0;
             outline: none;
             color: #2b3d31;
@@ -227,55 +227,67 @@
 
         .search-container input::placeholder {
             color: #b5956b;
-            font-size: 0.8rem;
+            font-size: clamp(0.7rem, 2.2vw, 1.4rem);
         }
 
         .search-hint {
             display: flex;
             justify-content: flex-end;
             gap: 4px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             color: #7d613e;
-            font-size: 0.7rem;
+            font-size: clamp(0.6rem, 2vw, 1.2rem);
             flex-wrap: wrap;
         }
 
-        /* ===== TABLE – now fits without horizontal scroll ===== */
+        /* ===== TABLE – perfectly readable on all devices ===== */
         .table-container {
             width: 100%;
-            overflow: visible; /* no scroll */
-            border-radius: 20px;
+            overflow-x: auto; /* only if absolutely needed, but we scale font so it rarely happens */
+            border-radius: max(12px, min(2vw, 30px));
             background: #fefcf7;
             border: 1px solid #efd9bb;
             box-shadow: 0 10px 18px -10px #5e4530;
-            margin-bottom: 15px;
+            margin-bottom: clamp(12px, 2.5vh, 25px);
+            -webkit-overflow-scrolling: touch;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            table-layout: auto; /* columns adjust to content */
-            font-size: 0.7rem; /* small base for mobile */
+            font-size: clamp(0.7rem, 2.2vw, 1.5rem); /* scales from mobile to large desktop */
+            min-width: 300px; /* never too small */
         }
 
-        /* make columns proportionally smaller */
+        /* make columns readable */
         th, td {
-            padding: 6px 2px;
+            padding: clamp(5px, 1.2vw, 18px) clamp(3px, 0.8vw, 12px);
             text-align: center;
             word-break: normal;
-            white-space: normal;
+            white-space: nowrap; /* keep data in one line on large, but can wrap if needed */
+        }
+
+        /* allow wrapping on very small devices if needed */
+        @media (max-width: 450px) {
+            th, td {
+                white-space: normal;
+                word-break: break-word;
+            }
+            table {
+                font-size: 0.65rem;
+            }
         }
 
         th {
             background: #1a5e45;
             color: #fbeed5;
             font-weight: 600;
-            font-size: 0.7rem;
+            font-size: clamp(0.7rem, 2.2vw, 1.5rem);
             border-bottom: 2px solid #e5b46b;
         }
 
         th .material-icons {
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2.5vw, 1.8rem);
             vertical-align: middle;
             margin-left: 2px;
             color: #fdd894;
@@ -297,16 +309,16 @@
         td:nth-child(3) { color: #166b4a; }
         td:nth-child(4) { color: #ac4f1e; }
 
-        /* ===== SMALL FOOTER – extra compact ===== */
+        /* ===== SMALL FOOTER – scales ===== */
         .small-footer {
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 8px 12px;
             background: #efe0cd;
-            border-radius: 30px;
-            padding: 8px 12px;
+            border-radius: max(20px, min(3vw, 50px));
+            padding: clamp(8px, 1.8vw, 20px) clamp(12px, 2.5vw, 30px);
             border: 1px solid #e3bc8b;
             box-shadow: 0 5px 10px -5px #745f43;
         }
@@ -314,17 +326,17 @@
         .uba-footer-small {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
             background: #fbead7;
-            padding: 4px 12px;
+            padding: 4px clamp(10px, 2vw, 24px);
             border-radius: 40px;
-            font-size: 0.8rem;
+            font-size: clamp(0.7rem, 2.2vw, 1.5rem);
             border: 1px solid #d6a469;
             white-space: nowrap;
         }
 
         .uba-footer-small .material-icons {
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 2.8vw, 2rem);
             color: #206b49;
         }
 
@@ -333,40 +345,37 @@
             align-items: center;
             gap: 8px;
             color: #4d3a25;
-            font-size: 0.8rem;
+            font-size: clamp(0.7rem, 2.2vw, 1.5rem);
             flex-wrap: wrap;
         }
 
         .dua-small .material-icons {
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 2.8vw, 2.2rem);
             color: #b06428;
         }
 
         .year-note {
             background: #fde7c0;
-            border-radius: 30px;
-            padding: 3px 12px;
+            border-radius: 40px;
+            padding: 3px clamp(8px, 1.8vw, 20px);
             display: flex;
             align-items: center;
             gap: 4px;
             color: #2a4d2a;
-            font-size: 0.75rem;
+            font-size: clamp(0.65rem, 2vw, 1.3rem);
             white-space: nowrap;
         }
 
-        /* extra small screens */
-        @media (max-width: 380px) {
-            table {
-                font-size: 0.6rem;
+        /* on large screens, everything becomes comfortably big */
+        @media (min-width: 1200px) {
+            .islamic-card {
+                padding: 40px;
             }
             th, td {
-                padding: 4px 1px;
+                padding: 18px 12px;
             }
             .uba-header-small {
-                font-size: 0.75rem;
-            }
-            .chip-pak {
-                font-size: 0.75rem;
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -423,7 +432,7 @@
         <span>ہجری / عیسوی فلٹر</span>
     </div>
 
-    <!-- TABLE – now fits without scroll -->
+    <!-- TABLE – scales with viewport -->
     <div class="table-container">
         <table id="hijriTable">
             <thead>
